@@ -1,0 +1,102 @@
+body {
+    background-image: url('bc.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    font-family: 'Poppins', sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+    overflow: hidden; 
+}
+
+.balloon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    overflow: hidden; 
+}
+
+.balloon {
+    position: absolute;
+    top: -10%;
+    width: 1px; 
+    opacity: 0.7; 
+    animation: fall linear infinite;
+    visibility: hidden; 
+}
+
+.balloon:nth-child(1) { left: 10%; animation-duration: 10s; animation-delay: 0s; }
+.balloon:nth-child(2) { left: 20%; animation-duration: 10s; animation-delay: 2s; }
+.balloon:nth-child(3) { left: 30%; animation-duration: 10s; animation-delay: 4s; }
+.balloon:nth-child(4) { left: 40%; animation-duration: 10s; animation-delay: 6s; }
+.balloon:nth-child(5) { left: 50%; animation-duration: 10s; animation-delay: 8s; }
+.balloon:nth-child(6) { left: 60%; animation-duration: 10s; animation-delay: 10s; }
+.balloon:nth-child(7) { left: 70%; animation-duration: 10s; animation-delay: 12s; }
+.balloon:nth-child(8) { left: 80%; animation-duration: 10s; animation-delay: 14s; }
+
+@keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); visibility: visible; }
+    50% { transform: translateY(50vh) rotate(100deg); }
+    100% { transform: translateY(100vh) rotate(200deg); }
+}
+
+.login-box {
+    background: rgba(14, 13, 13, 0.3); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin: 0 0 20px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-box input[type="submit"] {
+    background: #83617A;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.login-box input[type="submit"]:hover {
+    background: #715669;
+}
+
+.login-links {
+    margin-top: 10px;
+}
+
+.login-links a {
+    color: #83617A;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+.spacer {
+    margin: 0 10px;
+}
